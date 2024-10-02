@@ -2,6 +2,7 @@ import TimePage from "@/components/Time/Page";
 
 const Page = ({
   params: { time },
+  searchParams: { text },
 }: {
   params: {
     time: string;
@@ -10,7 +11,7 @@ const Page = ({
     text: string;
   };
 }) => {
-  return <TimePage time={time} />;
+  return <TimePage time={time} text={text} />;
 };
 
 export default Page;
