@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const TimePage = ({ time }: { time: string }) => {
+const TimePage = ({ time, text }: { time: string; text?: string }) => {
   const [targetDate, setTargetDate] = useState<Date | null>(null);
   const [timeRemaining, setTimeRemaining] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -56,10 +56,12 @@ const TimePage = ({ time }: { time: string }) => {
 
   return (
     <section className="site-section py-32">
-      <div className="wrapper">
+      <div className="wrapper min-h-[calc(100vh-16rem)] flex flex-col justify-center items-center">
         {timeRemaining && (
           <div className="mt-6 text-center">
-            <h2 className="text-xl font-semibold mb-2">Time Remaining:</h2>
+            <h2 className="text-xl font-semibold mb-2">
+              {text ? text : "Launching in:"}
+            </h2>
             <p className="text-5xl font-bold xl:text-8xl">{timeRemaining}</p>
           </div>
         )}
