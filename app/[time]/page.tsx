@@ -6,6 +6,9 @@ const Page = ({
   params: {
     time: string;
   };
+  searchParams: {
+    text: string;
+  };
 }) => {
   return <TimePage time={time} />;
 };

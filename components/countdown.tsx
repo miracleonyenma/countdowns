@@ -7,9 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
 
 export function Countdown() {
-  const [targetDate, setTargetDate] = useState<Date | null>(null);
+  const [targetDate] = useState<Date | null>(null);
   const [timeRemaining, setTimeRemaining] = useState<string>("");
-  const [error, setError] = useState<string>("");
+  const [error] = useState<string>("");
 
   const router = useRouter();
 
